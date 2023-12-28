@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#todo-container {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#todo-container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#todo-input {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+#add-todo-btn {
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+.todo-text {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+input[type="number"] {
+    width: 25%; 
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px; 
+}
+.input-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Modal Styles */
+#editModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.modal-content {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+}
